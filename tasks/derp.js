@@ -1,4 +1,4 @@
 
-var unfollow = require('./tasks/unfollow.js');
+var unfollow = require('unfollow.js');
 
 unfollow();
