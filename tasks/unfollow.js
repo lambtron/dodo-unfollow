@@ -28,4 +28,4 @@ function *main() {
  * Initiate `main`.
  */
 
-module.exports = co(main);
+module.exports = co.wrap(main);
