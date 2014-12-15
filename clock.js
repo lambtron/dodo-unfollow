@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-var unfollow = require('./lib/unfollow.js');
+var unfollow = require('./tasks/unfollow.js');
 var CronJob = require('cron').CronJob;
 
 /**
