@@ -1,9 +1,12 @@
-Dodo
+Dodo-unfollow
 ====
 
 ![](http://fxcnews.com/wp-content/uploads/2014/11/dodo_bird.jpg)
 
 > Periodically unfollow Twitter users in a private Twitter list.
+
+- [server](https://github.com/lambtron/dodo)
+- [trapper](https://github.com/lambtron/dodo-trapper)
 
 ```
 $ node --harmony ./tasks/unfollow.js
