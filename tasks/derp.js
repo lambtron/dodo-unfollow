@@ -1,4 +1,4 @@
 
-var unfollow = require('unfollow.js');
+var unfollow = require('./unfollow.js');
 
 unfollow();
