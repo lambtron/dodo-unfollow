@@ -14,7 +14,7 @@
   },
   "private": true,
   "dependencies": {
-    "co": "^4.0.0",
+    "co": "^4.0.1",
     "co-body": "^1.0.0",
     "co-monk": "^1.0.0",
     "co-views": "^0.2.0",

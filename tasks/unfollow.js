@@ -5,6 +5,7 @@
 
 var Users = require('../lib/users');
 var Dodo = require('../lib/dodo');
+var co = require('co');
 
 /**
  * Main function.
@@ -27,4 +28,4 @@ function *main() {
  * Initiate `main`.
  */
 
-module.exports = main;
+module.exports = co(main);
