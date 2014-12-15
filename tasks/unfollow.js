@@ -14,6 +14,7 @@ var co = require('co');
 function *main() {
   var users = yield Users.find({});
   for (var i = 0; i < users.length; i++) {
+    console.log('in for loop');
     Dodo.authenticateUser(users[i].token, users[i].secret);
     var dodoListId = yield Dodo.getDodoListId(users[i].id);
     var members = yield Dodo.getMembersInList(dodoListId);
