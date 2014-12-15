@@ -1,1 +1,1 @@
-clock: clock.js
+clock: node --harmony clock.js
