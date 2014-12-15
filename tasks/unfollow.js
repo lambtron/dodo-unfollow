@@ -13,14 +13,13 @@ var co = require('co');
 
 function *main() {
   var users = yield Users.find({});
+  var dodo = new Dodo();
   for (var i = 0; i < users.length; i++) {
-    console.log('in for loop');
-    Dodo.authenticateUser(users[i].token, users[i].secret);
-    var dodoListId = yield Dodo.getDodoListId(users[i].id);
-    var members = yield Dodo.getMembersInList(dodoListId);
-    console.log(members);
-    yield Dodo.unfollowMembersInList(members);
-    Dodo.destroy();
+    yield dodo.authenticateUser(users[i].token, users[i].secret);
+    var dodoListId = yield dodo.getDodoListId(users[i].user_id);
+    var members = yield dodo.getMembers(dodoListId);
+    yield dodo.unfollowMembersInList(members);
+    dodo.destroy();
   }
 }
 
