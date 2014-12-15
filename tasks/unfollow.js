@@ -25,4 +25,4 @@ function *main() {
  * Initiate `main`.
  */
 
-main();
+module.exports = main();
