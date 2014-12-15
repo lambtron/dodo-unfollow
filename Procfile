@@ -1,1 +1,1 @@
-web:
+clock: clock.js
