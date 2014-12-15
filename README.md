@@ -10,7 +10,9 @@ Related services:
 - [trapper](https://github.com/lambtron/dodo-trapper)
 
 ```
-$ node --harmony ./tasks/unfollow.js
+var unfollow = require('./tasks/unfollow');
+
+unfollow();
 ```
 
 ## License (MIT)

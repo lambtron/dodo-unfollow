@@ -24,7 +24,7 @@ function *main() {
 }
 
 /**
- * Initiate `main`.
+ * Expose `main`.
  */
 
 module.exports = co.wrap(main);
