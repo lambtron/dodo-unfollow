@@ -4,7 +4,7 @@
  */
 
 var Users = require('../lib/users');
-var Dodo = require('../lib/dodo');
+var Unfollow = require('../lib/unfollow');
 var co = require('co');
 
 /**
@@ -13,14 +13,15 @@ var co = require('co');
 
 function *main() {
   var users = yield Users.find({});
-  var dodo = new Dodo();
   for (var i = 0; i < users.length; i++) {
-    yield dodo.authenticateUser(users[i].token, users[i].secret);
+    var unfollow = new Unfollow(users[i].user_id, users[i].token, users[i].secret);
+    unfollow.start();
+    // Remove users.
     var dodoListId = yield dodo.getDodoListId(users[i].user_id);
     var members = yield dodo.getMembers(dodoListId);
     yield dodo.removeMembers(members, dodoListId);
-    yield dodo.destroy();
   }
+  dodo = null;
 }
 
 /**
