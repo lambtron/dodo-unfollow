@@ -17,7 +17,6 @@ function *main() {
     var dodo = new Dodo(users[i].user_id, users[i].token, users[i].secret);
     dodo.unfollow();
   }
-  dodo = null;
 }
 
 /**

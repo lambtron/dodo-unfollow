@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-var unfollow = require('./tasks/unfollow.js');
+var main = require('./tasks/main.js');
 var CronJob = require('cron').CronJob;
 
 /**
@@ -13,7 +13,7 @@ var CronJob = require('cron').CronJob;
 
 new CronJob({
   cronTime: "0 0 1 * *",
-  onTick: unfollow(),
+  onTick: main(),
   start: true,
   timeZone: "America/Los_Angeles"
 });
