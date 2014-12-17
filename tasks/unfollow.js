@@ -18,7 +18,7 @@ function *main() {
     yield dodo.authenticateUser(users[i].token, users[i].secret);
     var dodoListId = yield dodo.getDodoListId(users[i].user_id);
     var members = yield dodo.getMembers(dodoListId);
-    yield dodo.unfollowMembersInList(members);
+    yield dodo.removeMembers(members, dodoListId);
     yield dodo.destroy();
   }
 }
