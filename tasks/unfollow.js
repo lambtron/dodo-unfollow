@@ -19,7 +19,7 @@ function *main() {
     var dodoListId = yield dodo.getDodoListId(users[i].user_id);
     var members = yield dodo.getMembers(dodoListId);
     yield dodo.unfollowMembersInList(members);
-    dodo.destroy();
+    yield dodo.destroy();
   }
 }
 
