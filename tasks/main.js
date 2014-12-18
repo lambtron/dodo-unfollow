@@ -12,7 +12,9 @@ var co = require('co');
  */
 
 function *main() {
+  console.log('hi, users:');
   var users = yield Users.find({});
+  console.log(users);
   for (var i = 0; i < users.length; i++) {
     var dodo = new Dodo(users[i].user_id, users[i].token, users[i].secret);
     dodo.unfollow();
