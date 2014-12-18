@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-var main = require('./tasks/main.js');
+var main = require('./main.js');
 
 /**
  * Run `main`.
